@@ -1,0 +1,15 @@
+server:
+  port: 8105
+spring:
+  application:
+    name: redbook-service-order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.227.200:8848
+      config:
+        server-addr: 192.168.227.200:8848
+  config:
+    import:
+      - nacos:redbook-service-order.yaml
+      - nacos:shared-config.yaml

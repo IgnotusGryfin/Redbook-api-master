@@ -1,0 +1,16 @@
+server:
+  port: 8095
+spring:
+  application:
+    name: redbook-service-product
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.227.200:8848
+      config:
+        server-addr: 192.168.227.200:8848
+  config:
+    import:
+      - nacos:redbook-service-product.yaml
+      - nacos:shared-config.yaml
+

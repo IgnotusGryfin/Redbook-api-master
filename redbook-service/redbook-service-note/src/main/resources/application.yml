@@ -1,0 +1,17 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: redbook-service-note
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.227.200:8848
+      config:
+        server-addr: 192.168.227.200:8848
+  config:
+    import:
+      - nacos:redbook-service-note.yaml
+      - nacos:shared-config.yaml
+
+
